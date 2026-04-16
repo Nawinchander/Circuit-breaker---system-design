@@ -57,6 +57,27 @@ Order Service immediately returns:
 Fast failure = healthy system.
 
 
+3. Circuit Breaker States
+Closed State
 
+Everything works normally.
+
+Request -> Service Call -> Response
+
+Failures are counted.
+
+Open State
+
+Too many failures happened.
+
+Request -> Circuit Open -> Immediate Failure
+
+No external call is made.
+
+Half-Open State
+
+After timeout, allow limited test requests.
+
+Test Request -> Success ? Close : Open
 
 
