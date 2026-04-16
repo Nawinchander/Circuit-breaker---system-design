@@ -1,3 +1,12 @@
+FAANG Interview Summary Answer
+
+If asked in an interview:
+
+"Circuit Breaker is a fault tolerance pattern used to stop requests to an unhealthy service after repeated failures. It has Closed, Open, and Half-Open states. It prevents cascading failures, reduces latency, and allows graceful degradation. In large-scale systems like payment or recommendation services, it protects resources and improves resiliency."
+
+This is a strong FAANG-ready answer.
+
+
 Q1: What problem does Circuit Breaker solve?
 
 It prevents repeated calls to a failing service, avoiding resource exhaustion and cascade failures.
