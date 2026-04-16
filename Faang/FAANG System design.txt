@@ -20,7 +20,42 @@ Return fallback:
 
 instead of failing the homepage.
 
+3. Email Service
+
+If email provider fails:
+
+Open breaker and queue email for retry later.
+
+4. Database Protection
+
+If DB latency spikes:
+
+Open breaker for expensive queries.
 
 
+
+Benefits
+1. Prevents Cascading Failure
+
+One failed service won’t bring down all services.
+
+2. Saves Resources
+
+No wasted threads/connections on failing services.
+
+3. Fast Failure
+
+Users get immediate response instead of long timeout.
+
+4. Graceful Degradation
+
+Fallback responses can be returned.
+
+Example:
+
+"Recommendations unavailable"
+5. Improves Stability
+
+Helps the system recover.
 
 
