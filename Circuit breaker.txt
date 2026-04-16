@@ -1,0 +1,14 @@
+A Circuit Breaker in system design is a resilience pattern used to prevent an application from repeatedly trying an operation that is likely to fail, such as calling a slow/downstream service (payment API, DB, email service, etc.).
+
+Think of it like an electrical circuit breaker in your home:
+
+If too many failures happen → breaker opens
+Requests stop going to the failing service
+After some time → breaker half-opens
+It tests whether the service recovered
+If success → breaker closes
+If failure → breaker opens again
+
+This is heavily used in microservices, distributed systems, and FAANG-scale backend systems.
+
+
