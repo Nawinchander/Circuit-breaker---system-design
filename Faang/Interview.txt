@@ -1,0 +1,55 @@
+Q1: What problem does Circuit Breaker solve?
+
+It prevents repeated calls to a failing service, avoiding resource exhaustion and cascade failures.
+
+Q2: What are the states of a Circuit Breaker?
+Closed – normal operation
+Open – requests blocked
+Half-Open – trial requests allowed
+Q3: Difference between Retry and Circuit Breaker?
+Retry:
+
+Retries failed requests.
+
+Circuit Breaker:
+
+Stops requests after repeated failures.
+
+Usually used together:
+
+Retry -> Circuit Breaker -> Fallback
+
+Q4: Where is it used?
+Payment APIs
+DB calls
+Third-party APIs
+Microservices communication
+
+
+Q5: What happens in Half-Open state?
+
+Limited requests are sent to check recovery.
+
+If success:
+
+breaker closes
+
+If failure:
+
+breaker opens again
+
+
+Q6: How would FAANG implement it?
+
+Using:
+
+Redis for distributed breaker state
+Metrics for failure tracking
+Fallback service
+Monitoring/alerts
+
+
+
+
+
+
