@@ -26,4 +26,17 @@ const breaker = new CircuitBreaker(paymentService, {
 })();
 
 
+//// possible output
 
+// ERROR: Payment API failed
+// ERROR: Payment API failed
+// ERROR: Payment API failed
+// ERROR: Circuit is OPEN. Request blocked.
+// ERROR: Circuit is OPEN. Request blocked.
+
+/// after timeout
+
+// SUCCESS: Payment Success
+// SUCCESS: Payment Success
+
+// Then circuit closes again.
