@@ -12,3 +12,51 @@ If failure → breaker opens again
 This is heavily used in microservices, distributed systems, and FAANG-scale backend systems.
 
 
+1. Why Circuit Breaker is Needed
+
+Without circuit breaker:
+
+Service A calls Service B
+Service B is slow/down
+Service A keeps retrying
+Thread pool gets exhausted
+Entire system becomes slow
+Cascade failure happens
+
+With circuit breaker:
+
+After threshold failures, calls are blocked temporarily
+System fails fast
+Resources are protected
+Recovery becomes easier
+
+2. Real World Example
+
+Imagine:
+
+Order Service → Payment Service
+
+When payment service fails:
+
+Without breaker:
+
+Order Service -> Payment API -> Timeout
+Order Service -> Payment API -> Timeout
+Order Service -> Payment API -> Timeout
+...
+
+This overloads the payment service and order service.
+
+With breaker:
+
+Failures exceed threshold
+Circuit opens
+Order Service immediately returns:
+"Payment service unavailable, try later"
+
+Fast failure = healthy system.
+
+
+
+
+
