@@ -1,0 +1,26 @@
+FAANG System Design Use Cases
+1. Payment Gateway Calls
+
+If payment provider is failing:
+
+Open breaker
+Return graceful fallback
+Avoid retry storm
+
+Example:
+
+Order Service → Stripe
+2. Recommendation Service
+
+If recommendation engine is down:
+
+Return fallback:
+
+"Top products"
+
+instead of failing the homepage.
+
+
+
+
+
