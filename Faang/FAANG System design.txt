@@ -59,3 +59,28 @@ Example:
 Helps the system recover.
 
 
+Drawbacks
+1. Added Complexity
+
+More logic to maintain.
+
+2. Wrong Threshold Tuning
+
+If threshold is too low:
+
+Circuit opens unnecessarily
+
+Too high:
+
+System overloads before opening
+
+3. Temporary Denial
+
+Service may recover but breaker is still open until timeout.
+
+State Management in Distributed Systems
+
+If multiple instances exist, breaker state must be synchronized.
+
+
+
