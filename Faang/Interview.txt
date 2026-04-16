@@ -48,6 +48,39 @@ Metrics for failure tracking
 Fallback service
 Monitoring/alerts
 
+FAANG-Level Enhancement Ideas
+
+To make this production-ready, add:
+
+1. Distributed State via Redis
+breaker:payment-service = OPEN
+
+All service instances share breaker state.
+
+2. Metrics Monitoring
+
+Track:
+
+failure rate
+latency
+open count
+Use:
+
+Prometheus
+Grafana
+
+3. Fallback Mechanism
+
+return cachedResponse || "Service unavailable";
+
+
+4. Retry + Exponential Backoff
+
+Before opening breaker:
+
+100ms -> 200ms -> 400ms
+
+
 
 
 
