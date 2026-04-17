@@ -1,0 +1,26 @@
+FAANG Interview Insight
+
+These examples show three important circuit breaker strategies:
+
+1. Fallback to another data source
+
+Redis → DB
+
+Primary fails → Secondary works
+
+2. Fallback to alternate provider
+
+SMS → Email
+
+Provider A fails → Provider B works
+
+
+3. Graceful degraded response
+
+Inventory → "Unknown"
+
+Service fails → Safe response
+
+
+
+
