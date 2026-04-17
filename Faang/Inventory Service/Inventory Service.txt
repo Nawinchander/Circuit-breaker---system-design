@@ -1,0 +1,20 @@
+Circuit Breaker for Inventory Service
+Scenario:
+
+Checkout Service calls Inventory Service.
+
+If inventory service is slow:
+
+checkout threads block
+cart checkout slows
+sales drop
+
+Breaker returns fallback:
+
+"Inventory status unavailable"
+
+Used in:
+
+Amazon cart systems
+Walmart stock service
+Flipkart order processing
