@@ -18,3 +18,15 @@ Meta notifications
 LinkedIn alerts
 Swiggy OTP delivery
 
+Signup → SMS Service
+      ↘ fail → Email Service
+
+
+Interview Point
+
+Critical because:
+
+Notification failure must not fail signup
+
+This shows graceful degradation.
+
