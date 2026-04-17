@@ -1,0 +1,17 @@
+Circuit Breaker for Redis Cache Service
+Scenario:
+
+Your Product Service fetches product data from Redis.
+
+If Redis is down:
+
+avoid repeated retries
+fetch from DB fallback
+protect app threads
+
+This is common in:
+
+Amazon product cache
+Netflix metadata cache
+
+
