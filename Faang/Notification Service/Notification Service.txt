@@ -1,0 +1,20 @@
+Circuit Breaker for Notification Service
+Scenario:
+
+User signup triggers:
+
+SMS service
+Email service
+Push service
+
+If SMS provider fails:
+
+do not block signup
+fallback to email
+
+Used in:
+
+Meta notifications
+LinkedIn alerts
+Swiggy OTP delivery
+
