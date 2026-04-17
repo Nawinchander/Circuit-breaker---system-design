@@ -22,5 +22,33 @@ Inventory → "Unknown"
 Service fails → Safe response
 
 
+FAANG Interview Question
+Q: Where should we use circuit breakers?
 
+Use them in:
+
+external APIs
+payment services
+cache services
+microservices
+notifications
+inventory systems
+
+Because they prevent:
+
+cascading failure
+thread exhaustion
+latency spikes
+
+
+Q: What fallback strategies exist?
+Cached data
+Secondary provider
+Default response
+Queue for later processing
+FAANG-Level Interview Answer
+
+“In production systems, circuit breakers are applied around unreliable downstream dependencies like cache, notification, and inventory services. They prevent repeated failures from propagating through the system by opening after threshold failures and returning fallback responses like cached data, alternate providers, or degraded defaults.”
+
+That is exactly the kind of answer interviewers want.
 
