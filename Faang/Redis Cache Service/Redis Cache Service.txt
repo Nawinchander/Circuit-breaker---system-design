@@ -15,3 +15,15 @@ Amazon product cache
 Netflix metadata cache
 
 
+Product API → Redis Cache
+          ↘ if fail → DB fallback
+
+
+Interview Point
+
+This prevents:
+
+Redis retry storm
+Increased latency
+DB overload caused by bad retries
+
