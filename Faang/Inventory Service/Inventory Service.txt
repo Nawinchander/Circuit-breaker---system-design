@@ -18,3 +18,17 @@ Used in:
 Amazon cart systems
 Walmart stock service
 Flipkart order processing
+
+
+Flow
+Checkout → Inventory Service
+        ↘ fail → fallback response
+Interview Point
+
+This avoids:
+
+checkout timeout
+blocked threads
+abandoned carts
+
+
